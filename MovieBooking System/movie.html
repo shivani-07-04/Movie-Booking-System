@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookMyShow Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="movie.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="bg-blue-600 text-white text-center py-4">
+                <h1 class="text-3xl font-bold">BookMyShow</h1>
+            </div>
+
+            <!-- Movie Selection Section -->
+            <div id="movieSelection" class="p-6">
+                <h2 class="text-2xl font-semibold mb-4">Select a Movie</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="movie-card cursor-pointer border p-4 rounded hover:bg-blue-50" data-movie="Pushpa2: AlluArjun" data-price="250">
+                        <img src="/api/placeholder/200/300" alt="Movie Poster" class="w-full mb-2">
+                        <h3 class="font-bold">Pushpa2: AlluArjun</h3>
+                        <p>₹250</p>
+                    </div>
+                    <div class="movie-card cursor-pointer border p-4 rounded hover:bg-blue-50" data-movie="GameChanger" data-price="200">
+                        <img src="/api/placeholder/200/300" alt="Movie Poster" class="w-full mb-2">
+                        <h3 class="font-bold">GameChanger</h3>
+                        <p>₹200</p>
+                    </div>
+                    <div class="movie-card cursor-pointer border p-4 rounded hover:bg-blue-50" data-movie=" Robinhood" data-price="220">
+                        <img src="/api/placeholder/200/300" alt="Movie Poster" class="w-full mb-2">
+                        <h3 class="font-bold"> Robinhood</h3>
+                        <p>₹220</p>
+</div>
+<div class="movie-card cursor-pointer border p-4 rounded hover:bg-blue-50" data-movie=" Vidudala 2:" data-price="220">
+                        <img src="/api/placeholder/200/300" alt="Movie Poster" class="w-full mb-2">
+                        <h3 class="font-bold"> Vidudala 2:</h3>
+                        <p>₹220</p>
+</div>
+
+<div class="movie-card cursor-pointer border p-4 rounded hover:bg-blue-50" data-movie=" Sarangapani Jathakam" data-price="220">
+                        <img src="/api/placeholder/200/300" alt="Movie Poster" class="w-full mb-2">
+                        <h3 class="font-bold">Sarangapani Jathakam</h3>
+                        <p>₹220</p>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seat Selection Section -->
+            <div id="seatSelection" class="p-6 hidden">
+                <h2 class="text-2xl font-semibold mb-4">Select Seats</h2>
+                <div class="grid grid-cols-8 gap-2" id="seatMap">
+                    <!-- Seats will be dynamically generated -->
+                </div>
+                <div class="mt-4">
+                    <p>Selected Movie: <span id="selectedMovieName"></span></p>
+                    <p>Total Price: ₹<span id="totalPrice">0</span></p>
+                </div>
+                <button id="bookTicketBtn" class="mt-4 bg-green-500 text-white px-6 py-2 rounded">Book Ticket</button>
+            </div>
+
+            <!-- Booking Confirmation Section -->
+            <div id="bookingConfirmation" class="p-6 hidden">
+                <h2 class="text-2xl font-semibold text-green-600">Booking Confirmed!</h2>
+                <div id="ticketDetails" class="border p-4 mt-4 rounded bg-gray-50"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="movie.js"></script>
+</body>
+</html>

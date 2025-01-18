@@ -1,0 +1,22 @@
+/* Custom Seat Styling */
+.seat {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.seat.booked {
+    background-color: #FF5722;
+    cursor: not-allowed;
+}
+
+/* Additional custom styles can be added here */
+.movie-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
